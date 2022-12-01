@@ -19,7 +19,7 @@ var contactUs = async (req, res) => {
         let responsemessage = "Email sent successfull"
 
         const { firstname, surname, useremailaddress, message } = contactUsData
-        let recieverEmail = "jamshaidsabir411980@gmail.com"
+        let recieverEmail = "info@devopsmarkaz.com"
 
         res.mailer.send('emails/contactus.html', {
             surname: surname,
@@ -85,7 +85,7 @@ var carRentRequest = async (req, res) => {
             aacceptprivacypolicyecondition = "Jawohl"
         }
 
-        let recieverEmail = "jamshaidsabir411980@gmail.com"
+        let recieverEmail = "info@devopsmarkaz.com"
 
         res.mailer.send('emails/rentacar.html', {
             startdate: startdate,
