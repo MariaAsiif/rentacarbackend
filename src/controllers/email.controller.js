@@ -20,7 +20,7 @@ var contactUs = async (req, res) => {
     try {
 
         var contactUsData = req.body
-        let responsemessage = "Email sent successfull"
+        
 
         const { firstname, surname, useremailaddress, message } = contactUsData
 
@@ -40,6 +40,7 @@ var contactUs = async (req, res) => {
             }
         })
 
+        let responsemessage = "Email sent successfully"
         return responseHelper.success(res, {}, responsemessage)
 
 
@@ -130,7 +131,7 @@ var carRentRequest = async (req, res) => {
             }
         })
 
-        let responsemessage = "Email sent successfull"
+        let responsemessage = "Email sent successfully"
 
         return responseHelper.success(res, {}, responsemessage)
 
