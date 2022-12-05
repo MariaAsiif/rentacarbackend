@@ -1,4 +1,8 @@
+/*
+System developed and deployed by Jamshaid Sabir
+jamshaidsabir411980@gmail.com
 
+*/
 
 //bluebird for promises
 const promise = require('bluebird');
@@ -19,7 +23,9 @@ var contactUs = async (req, res) => {
         let responsemessage = "Email sent successfull"
 
         const { firstname, surname, useremailaddress, message } = contactUsData
-        let recieverEmail = "jamshaidsabir411980@gmail.com"
+
+
+        let recieverEmail = "info@devopsmarkaz.com"
 
         res.mailer.send('emails/contactus.html', {
             surname: surname,
@@ -53,6 +59,8 @@ var carRentRequest = async (req, res) => {
 
         const { startdate, starttime, enddate, endtime, firstname, lastname, streetandhouseno, postcode, location, phonenumber, email, atage, agreetoterms, acceptprivacypolicy, kilometerpackages, totalfreekilometers, basicprice, additionalkilometers, totalprice, plusdeposit, excess } = contactUsData
 
+
+
         let atagecondition = "Nein"
         let agreetotermscondition = "Nein"
         let aacceptprivacypolicyecondition = "Nein"
@@ -63,6 +71,8 @@ var carRentRequest = async (req, res) => {
 
         if (kilometerpackages.hundredkm) {
             hundredkm = "Jawohl"
+        } else {
+            hundredkm = "Nein"
         }
 
         if (kilometerpackages.twohundredkm) {
@@ -85,7 +95,7 @@ var carRentRequest = async (req, res) => {
             aacceptprivacypolicyecondition = "Jawohl"
         }
 
-        let recieverEmail = "jamshaidsabir411980@gmail.com"
+        let recieverEmail = "info@devopsmarkaz.com"
 
         res.mailer.send('emails/rentacar.html', {
             startdate: startdate,
